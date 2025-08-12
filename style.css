@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* spacing */
+    --sp1: 4px;
+    --sp2: 8px;
+    --sp3: 16px;
+    --sp4: 24px;
+    --sp5: 32px;
+    --sp6: 48px;
+
+    /* colors */
+    --light: #FFFFFF;
+    --light-alt: #F5F5F5;
+    --accent: #BD0F12;
+    --accent-hover: hsl(359, 85%, 45%);
+    --dark: #1E1E1E;
+
+    /* text */
+    --ff: 'Manrope', sans-serif;
+    --heading-h1: 700 clamp(40px, 2.5vw, 64px) / 115% var(--ff);
+    --heading-h2: 700 clamp(32px, 2.5vw, 48px) / 115% var(--ff);
+    --heading-h3: 600 clamp(24px, 2.5vw, 32px) / 115% var(--ff);
+    --display: 600 clamp(20px, 2.5vw, 24px) / 130% var(--ff);
+    --label: 500 16px / 115% var(--ff);
+    --text: 500 16px / 140% var(--ff);
+
+    /* text-color */
+    --heading-h1-clr: #212121;
+    --heading-h2-clr: #212121;
+    --heading-h3-clr: #2E2E2E;
+    --display-clr: #2E2E2E;
+    --label-clr: #474747;
+    --text-clr: #545454;
+
+    --heading-h1-clr-light: #F5F5F5;
+    --heading-h2-clr-light: #F5F5F5;
+    --heading-h3-clr-light: #EBEBEB;
+    --display-clr-light: #EBEBEB;
+    --label-clr-light: #E6E6E6;
+    --text-clr-light: #D6D6D6;
+
+    /* breakpoints */
+    --bp-tablet: 900px;
+    --bp-desktop: 1440px;
+}
