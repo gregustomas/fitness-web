@@ -25,10 +25,10 @@
 
     /* text */
     --ff: 'Manrope', sans-serif;
-    --heading-h1: 700 clamp(40px, 2.5vw, 64px) / 115% var(--ff);
-    --heading-h2: 700 clamp(32px, 2.5vw, 48px) / 115% var(--ff);
-    --heading-h3: 600 clamp(24px, 2.5vw, 32px) / 115% var(--ff);
-    --display: 600 clamp(20px, 2.5vw, 24px) / 130% var(--ff);
+    --heading-h1: 700 clamp(40px, 4vw, 64px) / 115% var(--ff);
+    --heading-h2: 700 clamp(32px, 4vw, 48px) / 115% var(--ff);
+    --heading-h3: 600 clamp(24px, 3vw, 32px) / 115% var(--ff);
+    --display: 600 clamp(20px, 3vw, 24px) / 130% var(--ff);
     --label: 500 16px / 115% var(--ff);
     --text: 500 16px / 140% var(--ff);
 
@@ -59,6 +59,34 @@ h3{ font: var(--heading-h3); color: var(--heading-h3-clr); }
 h4{ font: var(--label); color: var(--label-clr); text-transform: uppercase; }
 p{ font: var(--text); color: var(--text-clr); }
 li{ font: var(--text); color: var(--display-clr); font-weight: 600;}
+a{ text-decoration: none; }
+
+section{
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.cta{
+    background-color: var(--accent);
+    border-radius: 4px;
+    font: var(--text);
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 600;
+    color: var(--heading-h1-clr-light);
+    padding: 16px 20px;
+    width: fit-content;
+    transition: 0.4s;
+}
+
+.cta:hover{
+    background-color: var(--accent-hover);
+}
+
+@media (min-width: 600px) {
+    section{
+        padding: 80px 100px;
+    }
+}
 
 /* navbar */
 
@@ -130,8 +158,50 @@ li{ font: var(--text); color: var(--display-clr); font-weight: 600;}
     padding-bottom: 8px;
 }
 
-@media (max-width: var(--bp-desktop)) {
+@media (min-width: 600px) {
     .nav-container .nav-menu{
     width: 450px;
 }
+}
+
+/* hero */
+
+.hero{
+    height: 90vh;
+    background: linear-gradient(#ffffff27, #ffffff), url(./img/gym.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.hero-container{
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+.hero-container .text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.hero-container .text-container h4{
+    text-align: center;
+    padding-bottom: var(--sp1);
+}
+
+.hero-container .text-container h1{
+    text-align: center;
+    padding-bottom: var(--sp3);
+}
+
+@media (min-width: 600px) {
+    .hero-container .text-container{
+        width: 550px;
+    }
 }
