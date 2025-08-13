@@ -27,7 +27,7 @@
     --ff: 'Manrope', sans-serif;
     --heading-h1: 700 clamp(40px, 4vw, 64px) / 115% var(--ff);
     --heading-h2: 700 clamp(32px, 4vw, 48px) / 115% var(--ff);
-    --heading-h3: 600 clamp(24px, 3vw, 32px) / 115% var(--ff);
+    --heading-h3: 600 clamp(24px, 2.5vw, 32px) / 115% var(--ff);
     --display: 600 clamp(20px, 3vw, 24px) / 130% var(--ff);
     --label: 500 16px / 115% var(--ff);
     --text: 500 16px / 140% var(--ff);
@@ -203,5 +203,85 @@ section{
 @media (min-width: 600px) {
     .hero-container .text-container{
         width: 550px;
+    }
+}
+
+/* services */
+
+.services-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp5);
+}
+
+.services .text-container{
+    max-width: 550px;
+}
+
+.services .text-container h4{
+    padding-bottom: var(--sp1);
+}
+
+.services-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp4);
+}
+
+.services-wrap .service{
+    width: 100%;
+    height: 300px;
+    background-color: #1E1E1E;
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.services-wrap .service h3{
+    color: var(--heading-h3-clr-light);
+    width: 70%;
+}
+
+.services-wrap .powerlifting{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/powerlifting.jpg);
+    background-size: 100%;
+    background-position: center;
+    transition: 0.7s;
+}
+
+.services-wrap .powerlifting:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/powerlifting.jpg);
+    background-size: 120%;
+    background-position: center;
+}
+
+.services-wrap .bodybuilding{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/bodybuilding.jpg);
+    background-size: 100%;
+    background-position: center;
+    transition: 0.7s;
+}
+
+.services-wrap .bodybuilding:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/bodybuilding.jpg);
+    background-size: 120%;
+    background-position: center;
+}
+
+@media (min-width: 600px){
+    .services-container{
+        flex-direction: column;
+        gap: var(--sp6);
+    }
+
+    .services-wrap{
+        flex-direction: row;
+        gap: var(--sp5);
+    }
+
+    .services-wrap .service{
+        height: 450px;
+        padding: 32px;
     }
 }
